@@ -10,10 +10,7 @@ WORKDIR /source
 
 RUN pip install apache-superset
 RUN pip install -r requirements.txt
-RUN superset db upgrade
 RUN export FLASK_APP=superset
-
-RUN superset init
 
 EXPOSE 8088
 # Default superset port
