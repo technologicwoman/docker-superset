@@ -3,9 +3,9 @@ FROM python:3.7
 ENV PYTHONUNBUFFERED 1
 ENV FLASK_ENV=development
 ENV FLASK_APP=superset
-ENV PYTHONPATH=/source
 
 RUN mkdir /source
+ENV PYTHONPATH=/source
 COPY . /source
 WORKDIR /source
 
