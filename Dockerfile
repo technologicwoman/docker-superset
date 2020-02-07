@@ -10,6 +10,7 @@ ENV FLASK_ENV=development
 ENV FLASK_APP=superset
 
 RUN pip install --upgrade setuptools pip
+RUN pip install psycopg2
 RUN pip install apache-superset --ignore-installed PyYAML
 RUN pip install -r requirements.txt
 
