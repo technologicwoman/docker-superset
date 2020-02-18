@@ -19,10 +19,12 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'
 # superset metadata (slices, connections, tables, dashboards, ...).
 # Note that the connection information to connect to the datasources
 # you want to explore are managed directly in the web UI
-SQLALCHEMY_DATABASE_URI = 'postgresql://{}:{}@timescaledb/{}'.format(
-    os.getenv('POSTGRES_USER'),
-    os.getenv('POSTGRES_PASSWORD'),
-    os.getenv('POSTGRES_DB'),
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://{}:{}@{}/{}'.format(
+    os.get_env('POSTGRES_USER'),
+    os.get_env('POSTGRES_PASSWORD'),
+    os.get_env('POSTGRES_HOST'),
+    os.get_env('POSTGRES_DB'),
 )
 
 # Flask-WTF flag for CSRF
