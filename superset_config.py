@@ -37,7 +37,7 @@ WTF_CSRF_TIME_LIMIT = 60 * 60 * 24 * 365
 # Set this API key to enable Mapbox visualizations
 MAPBOX_API_KEY = ''
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+BASE_DIR = '/usr/local/lib/python3.7/site-packages/superset'
 
 # The file upload folder, when using models with files
 UPLOAD_FOLDER = BASE_DIR + '/app/static/uploads/'
