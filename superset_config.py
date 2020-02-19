@@ -21,10 +21,10 @@ SECRET_KEY = '\2\1thisismyscretkey\1\2\e\y\y\h'
 # you want to explore are managed directly in the web UI
 
 SQLALCHEMY_DATABASE_URI = 'postgresql://{}:{}@{}/{}'.format(
-    os.get_env('POSTGRES_USER'),
-    os.get_env('POSTGRES_PASSWORD'),
-    os.get_env('POSTGRES_HOST'),
-    os.get_env('POSTGRES_DB'),
+    os.getenv('POSTGRES_USER'),
+    os.getenv('POSTGRES_PASSWORD'),
+    os.getenv('POSTGRES_HOST'),
+    os.getenv('POSTGRES_DB'),
 )
 
 # Flask-WTF flag for CSRF
